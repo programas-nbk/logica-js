@@ -1,0 +1,32 @@
+{
+  "name": "logica-js",
+  "version": "1.0.0",
+  "description": "Projeto de aceleração em Lógica de Programação com JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:essencial": "jest -t Essencial",
+    "test:desejavel": "jest -t Desejavel",
+    "test:desafio": "jest -t Desafio",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programas-nbk/logica-js.git"
+  },
+  "keywords": [
+    "nubank",
+    "alura",
+    "level-up",
+    "javascript"
+  ],
+  "author": "Cácio Costa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/programas-nbk/logica-js/issues"
+  },
+  "homepage": "https://github.com/programas-nbk/logica-js#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
