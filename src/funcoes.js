@@ -108,7 +108,17 @@ function equacaoDeSegundoGrau(a, b, c) {
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
+function fibonacci(posicao) {
+    var algarismo = 1
+    var alterior1 = 1
+    var alterior2 = 1
+    for(var i=3; i <= posicao; i++){
+        algarismo = alterior1 + alterior2
+        alterior2 = alterior1
+        alterior1 = algarismo  
+    }
+    return algarismo
+}
 
 
 module.exports = {
