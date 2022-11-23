@@ -42,7 +42,13 @@ function calculaDesconto(valor, quantidade) {
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(x) {
+    var total = 0
+    for(var i=1; i <= x; i++){
+        total += i
+    }
+    return total
+}
 
 
 /**
