@@ -43,7 +43,17 @@ function calculaDesconto(purchaseValue, quantityOfItemsPurchased) {
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(number) {
+  let sumResult = 0;
+  let counter = 0;
+
+  while (counter < number) {
+    counter += 1;
+    sumResult = sumResult + counter;
+  }
+
+  return sumResult;
+}
 
 /**
  * Implemente uma função que recebe um número N devolve o fatorial do número.
