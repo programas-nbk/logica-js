@@ -70,7 +70,10 @@ function fatorial(n) {
 /**
  * Implemente uma função que recebe um array com notas de um aluno e retorne o valor da média dele.
  */
- function calculaMedia() {}
+ function calculaMedia(notas) {
+    let total = notas.reduce((total, nota) => total += nota)
+    return total / notas.length
+ }
 
 
 /**
