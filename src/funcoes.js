@@ -20,7 +20,21 @@ function cumprimenta(clientName) {
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(purchaseValue, quantityOfItemsPurchased) {
+  const discountTable = {
+    1: (value) => (0 * value) / 100,
+    2: (value) => (3 * value) / 100,
+    3: (value) => (7 * value) / 100,
+    4: (value) => (12 * value) / 100,
+    5: (value) => (20 * value) / 100,
+  };
+
+  if (quantityOfItemsPurchased >= 5) {
+    return discountTable[5](purchaseValue);
+  }
+
+  return discountTable[quantityOfItemsPurchased](purchaseValue);
+}
 
 /**
  * Implemente uma função que receba um número X e devolva a soma dos número de 1 a X.
