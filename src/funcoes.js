@@ -62,7 +62,17 @@ function somatorio(number) {
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
+function fatorial(number) {
+  let sumResult = 1;
+  let counter = 0;
+
+  while (counter < number) {
+    counter += 1;
+    sumResult = sumResult * counter;
+  }
+
+  return sumResult;
+}
 
 /**
  * Implemente uma função que recebe um array com notas de um aluno e retorne o valor da média dele.
