@@ -120,7 +120,20 @@ function extraiElementosDaData(date) {
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
+function fibonacci(number) {
+  let fibonacciSequence = [1, 1];
+  let counter = 0;
+
+  while (counter < number && number != fibonacciSequence.length) {
+    counter += 1;
+    fibonacciSequence.push(
+      fibonacciSequence[fibonacciSequence.length - 1] +
+        fibonacciSequence[fibonacciSequence.length - 2]
+    );
+  }
+
+  return fibonacciSequence[number - 1];
+}
 
 module.exports = {
   cumprimenta,
