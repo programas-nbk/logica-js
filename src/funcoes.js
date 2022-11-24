@@ -77,7 +77,12 @@ function fatorial(number) {
 /**
  * Implemente uma função que recebe um array com notas de um aluno e retorne o valor da média dele.
  */
-function calculaMedia() {}
+function calculaMedia(studentGrades) {
+  const resultSumOfGrades = studentGrades.reduce((prev, curr) => prev + curr, 0);
+  const averageResult = resultSumOfGrades / studentGrades.length;
+
+  return averageResult;
+}
 
 /**
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
