@@ -88,7 +88,16 @@ function calculaMedia(studentGrades) {
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+  const formulaResult = b ** 2 - 4 * a * c;
+
+  const resultOfTheFirstEquation = (b * -1 + Math.sqrt(formulaResult)) / (2 * a);
+
+  const resultOfTheSecondEquation =
+    (b * -1 + Math.sqrt(formulaResult) * -1) / (2 * a);
+
+  return [resultOfTheFirstEquation, resultOfTheSecondEquation];
+}
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY,
