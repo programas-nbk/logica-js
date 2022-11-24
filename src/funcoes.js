@@ -106,7 +106,11 @@ function equacaoDeSegundoGrau(a, b, c) {
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
  */
-function extraiElementosDaData() {}
+function extraiElementosDaData(date) {
+  const [day, month, year] = date.split('/');
+  const formattedDate = [year, month, day];
+  return formattedDate;
+}
 
 /**
  * Considerando a sequência de Fibonacci 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ...,
