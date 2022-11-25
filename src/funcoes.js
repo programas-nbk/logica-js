@@ -62,7 +62,14 @@ function somatorio(x) {
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
+function fatorial(n) {
+    if (n==0){
+        return 1
+    }
+    else{
+        return n*fatorial(n-1)
+    }
+}
 
 
 /**
