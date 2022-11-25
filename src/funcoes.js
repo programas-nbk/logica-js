@@ -96,7 +96,12 @@ function fatorial(n) {
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a,b,c) {
+    var x1 = ((-b) + (Math.sqrt( Math.pow(b,2) -(4*a*c) )))/(2*a)
+    var x2 = ((-b) - (Math.sqrt( Math.pow(b,2) -(4*a*c) )))/(2*a)
+
+    return [x1,x2]
+}
 
 
 /**
