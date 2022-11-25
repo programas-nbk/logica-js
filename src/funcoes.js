@@ -44,7 +44,15 @@ function calculaDesconto(value, itens) {
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(x) {
+    soma = 0
+    count = 0
+    while(count!=x){
+        count++
+        soma = soma + count
+    }
+    return soma
+}
 
 
 /**
