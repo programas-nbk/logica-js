@@ -21,7 +21,20 @@ function cumprimenta(nome) {
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(value, itens) {
+    switch(itens){
+        case 1:
+            return 0
+        case 2:
+            return value*0.03
+        case 3:
+            return value*0.07
+        case 4:
+            return value*0.12            
+        default:
+            return value*0.2
+    }
+}
 
 
 /**
