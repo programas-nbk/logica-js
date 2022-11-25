@@ -111,7 +111,9 @@ function equacaoDeSegundoGrau(a,b,c) {
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
  */
- function extraiElementosDaData() {}
+ function extraiElementosDaData(strgd) {
+    return (strgd.split('/')).reverse()
+ }
 
 
 /**
