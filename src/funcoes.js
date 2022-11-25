@@ -45,8 +45,8 @@ function calculaDesconto(value, itens) {
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
 function somatorio(x) {
-    soma = 0
-    count = 0
+    var soma = 0
+    var count = 0
     while(count!=x){
         count++
         soma = soma + count
@@ -75,7 +75,21 @@ function fatorial(n) {
 /**
  * Implemente uma função que recebe um array com notas de um aluno e retorne o valor da média dele.
  */
- function calculaMedia() {}
+ function calculaMedia(arr) {
+    var l = arr.length
+    var count = 0
+    var soma = 0
+
+    if (l!=0){
+        while (count<l){
+            soma = soma + arr[count] 
+            count++
+        }
+        return soma/l
+    }
+    else{return 0}
+
+ } 
 
 
 /**
