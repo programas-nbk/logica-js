@@ -102,10 +102,7 @@ function equacaoDeSegundoGrau(a, b, c) {
  *   - o DIA na posição 3.
  */
  function extraiElementosDaData(data) {
-    const dia = data.slice(0, 2)
-    const mes = data.slice(3, 5)
-    const ano = data.slice(6)
-    return [ano, mes, dia]
+    return data.split('/').reverse()
  }
 
 
