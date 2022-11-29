@@ -5,7 +5,9 @@
  *   - Se o nome do cliente é Bill Gates, o cumprimento deve ser "Olá, Bill Gates!".
  *   - Se o nome do cliente é Steve Jobs, o cumprimento deve ser "Olá, Steve Jobs!".
  */
-function cumprimenta() {}
+function cumprimenta(nome) {
+    return `Olá, ${nome}`
+}
 
 
 /**
@@ -19,7 +21,18 @@ function cumprimenta() {}
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(valor, qtd) {
+    if(qtd <= 1)
+        return 0
+    if(qtd == 2)
+        return valor * 0.03
+    if(qtd == 3)
+        return valor * 0.07
+    if(qtd == 4)
+        return valor * 0.12
+    
+    return valor * 0.2
+}
 
 
 /**
@@ -29,7 +42,9 @@ function calculaDesconto() {}
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(x) {
+    return (x * (1 + x)) / 2
+}
 
 
 /**
@@ -39,20 +54,44 @@ function somatorio() {}
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
+function fatorial(n) {
+    if(n == 0)
+        return 1
+    if(n < 3)
+        return n
+    
+    let res = 2
+    for(let i = 3; i <= n; i++)
+        res *= i
+    
+    return res
+}
 
 
 /**
  * Implemente uma função que recebe um array com notas de um aluno e retorne o valor da média dele.
  */
- function calculaMedia() {}
+ function calculaMedia(notas) {
+    let soma = 0
+    let size = notas.length
+    for(let i = 0; i < size; i++)
+        soma += notas[i]
+    
+    return soma / size
+ }
 
 
 /**
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+    const delta = (b * b) - (4 * a * c)
+    const raiz_delta = Math.sqrt(delta)
+    const x1 = (-1 * b + raiz_delta) / (2 * a)
+    const x2 = (-1 * b - raiz_delta) / (2 * a)
+    return [x1, x2]
+}
 
 
 /**
@@ -62,7 +101,12 @@ function equacaoDeSegundoGrau() {}
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
  */
- function extraiElementosDaData() {}
+ function extraiElementosDaData(data) {
+    const dia = data.slice(0, 2)
+    const mes = data.slice(3, 5)
+    const ano = data.slice(6)
+    return [ano, mes, dia]
+ }
 
 
 /**
@@ -73,7 +117,11 @@ function equacaoDeSegundoGrau() {}
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
+function fibonacci(n) {
+    if(n < 2)
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+}
 
 
 module.exports = {
