@@ -5,7 +5,9 @@
  *   - Se o nome do cliente é Bill Gates, o cumprimento deve ser "Olá, Bill Gates!".
  *   - Se o nome do cliente é Steve Jobs, o cumprimento deve ser "Olá, Steve Jobs!".
  */
-function cumprimenta() {}
+function cumprimenta(nomeCliente) {
+    return `Olá, ${nomeCliente}!`;
+}
 
 
 /**
@@ -19,7 +21,13 @@ function cumprimenta() {}
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(valorCompra, quantidadeItens) {
+    if (quantidadeItens == 1) return 0;
+    if (quantidadeItens == 2) return 0.03 * valorCompra;
+    if (quantidadeItens == 3) return 0.07 * valorCompra;
+    if (quantidadeItens == 4) return 0.12 * valorCompra;
+    return 0.2 * valorCompra;
+}
 
 
 /**
@@ -29,7 +37,13 @@ function calculaDesconto() {}
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(x) {
+    let soma = 0;
+    for (let i = 1; i <= x; i++) {
+        soma+=i;
+    }
+    return soma;
+}
 
 
 /**
@@ -39,7 +53,13 @@ function somatorio() {}
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
+function fatorial(n) {
+    let produto = 1;
+    for (let i = 1; i <= n; i++) {
+        produto*=i;
+    }
+    return produto;
+}
 
 
 /**
